@@ -5,3 +5,9 @@ Public website for the EasyDaisy iOS app, hosted with Cloudflare Pages at [easyd
 The App Store privacy policy URL is:
 
 <https://easydaisy.app/privacy/>
+
+The iOS Universal Link association file is published at:
+
+<https://easydaisy.app/.well-known/apple-app-site-association>
+
+It claims `/auth/invite` for the production EasyDaisy app ID.

@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "WNT9BWAKYX.com.easydaisy.app"
+        ],
+        "components": [
+          {
+            "/": "/auth/invite",
+            "comment": "Open EasyDaisy household invitations in the iOS app"
+          }
+        ]
+      }
+    ]
+  }
+}
