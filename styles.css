@@ -60,23 +60,44 @@ h1 { max-width: 760px; margin-bottom: 24px; font-size: clamp(3.45rem, 7.8vw, 6.8
 .feature-intro { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 48px; margin-bottom: 56px; }
 .feature-intro h2, .section-heading h2, .privacy-hero h1 { margin-bottom: 16px; font-size: clamp(2.35rem, 5vw, 4.7rem); letter-spacing: -0.055em; line-height: 1; }
 .feature-intro p { align-self: end; max-width: 640px; margin: 0; color: rgba(255, 255, 255, 0.66); font-size: 1.13rem; }
-.features { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255, 255, 255, 0.16); }
+.features { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(255, 255, 255, 0.16); }
 .feature { padding: 32px 30px 8px 0; }
 .feature + .feature { padding-left: 30px; border-left: 1px solid rgba(255, 255, 255, 0.16); }
 .feature-number { display: block; margin-bottom: 52px; color: var(--amber); font-size: 0.8rem; font-weight: 800; letter-spacing: 0.12em; }
 .feature h3 { margin-bottom: 12px; font-size: 1.5rem; letter-spacing: -0.025em; }
 .feature p { margin: 0; color: rgba(255, 255, 255, 0.63); }
-.screens { padding: 116px 0; }
+.screens { padding: 116px 0 70px; }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 34px; margin-bottom: 62px; }
 .section-heading p { max-width: 460px; margin-bottom: 4px; color: var(--muted); font-size: 1.05rem; }
-.screen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 4vw, 48px); }
-.screen-card { margin: 0; }
-.screen-card:nth-child(2) { transform: translateY(34px); }
 .screen-frame { overflow: hidden; border: 7px solid var(--ink); border-radius: 42px; background: var(--ink); box-shadow: 0 22px 55px rgba(51, 38, 25, 0.14); }
 .screen-frame img { width: 100%; border-radius: 33px; }
-.screen-card figcaption { padding: 22px 10px 0; }
-.screen-card strong { display: block; margin-bottom: 4px; font-size: 1.1rem; }
-.screen-card span { color: var(--muted); }
+.product-tour { display: grid; gap: 34px; }
+.tour-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(340px, 0.82fr); align-items: center; gap: clamp(42px, 8vw, 100px); padding: clamp(38px, 7vw, 78px); border: 1px solid var(--line); border-radius: 36px; background: var(--paper-strong); }
+.tour-row-reverse .tour-copy { order: 2; }
+.tour-row-reverse .tour-visual { order: 1; }
+.tour-copy h3 { max-width: 620px; margin-bottom: 18px; font-size: clamp(2.1rem, 4vw, 3.7rem); letter-spacing: -0.05em; line-height: 1.02; }
+.tour-copy > p:not(.tour-label) { max-width: 620px; margin-bottom: 24px; color: var(--muted); font-size: 1.08rem; }
+.tour-label { margin-bottom: 14px; color: #8c5707; font-size: 0.8rem; font-weight: 850; letter-spacing: 0.12em; text-transform: uppercase; }
+.capability-list { display: grid; gap: 11px; padding: 0; margin: 0; list-style: none; }
+.capability-list li { position: relative; padding-left: 28px; color: #4e4945; }
+.capability-list li::before { position: absolute; top: 0.58em; left: 0; width: 12px; height: 7px; border-bottom: 2px solid #a96600; border-left: 2px solid #a96600; content: ""; transform: rotate(-45deg); }
+.tour-visual { display: grid; min-height: 630px; place-items: center; padding: 42px; border-radius: 28px; }
+.tour-visual .screen-frame { width: min(100%, 294px); }
+.tour-visual-amber { background: linear-gradient(145deg, #ffedc7, #f7c688); }
+.tour-visual-sky { background: linear-gradient(145deg, #dff2f7, #a8d5e5); }
+.tour-visual-profile { background: linear-gradient(145deg, #f5e6de, #e9b9a9); }
+.tour-visual-training { overflow: hidden; min-height: 690px; background: linear-gradient(145deg, #fff0d8, #f2b98d); }
+.stacked-screens { position: relative; width: min(100%, 390px); height: 610px; }
+.stacked-screens .screen-frame { position: absolute; width: 250px; }
+.screen-frame-back { top: 48px; right: -8px; transform: rotate(7deg); }
+.screen-frame-front { bottom: 22px; left: -8px; z-index: 1; transform: rotate(-5deg); }
+.sync-section { padding: 34px 0 98px; }
+.sync-grid { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(44px, 8vw, 100px); padding: clamp(36px, 7vw, 72px); border-radius: 30px; background: var(--ink); color: white; }
+.sync-grid h2 { max-width: 650px; margin-bottom: 0; font-size: clamp(2.25rem, 4.5vw, 4rem); letter-spacing: -0.055em; line-height: 1; }
+.sync-grid .eyebrow { color: var(--amber); }
+.sync-copy { align-self: end; }
+.sync-copy p { color: rgba(255, 255, 255, 0.7); font-size: 1.08rem; }
+.sync-copy p:last-child { margin-bottom: 0; }
 .privacy-callout { padding: 30px 0 112px; }
 .privacy-card { position: relative; overflow: hidden; display: grid; grid-template-columns: 1.3fr auto; align-items: center; gap: 48px; padding: clamp(34px, 7vw, 74px); border-radius: 28px; background: var(--amber-soft); }
 .privacy-card::after { position: absolute; right: -70px; bottom: -110px; width: 280px; height: 280px; border: 42px solid rgba(245, 158, 11, 0.25); border-radius: 50%; content: ""; }
@@ -101,14 +122,18 @@ h1 { max-width: 760px; margin-bottom: 24px; font-size: clamp(3.45rem, 7.8vw, 6.8
 .policy-copy p:last-child { margin-bottom: 0; }
 
 @media (max-width: 880px) {
-  .hero-grid, .feature-intro, .privacy-card, .policy { grid-template-columns: 1fr; }
+  .hero-grid, .feature-intro, .tour-row, .sync-grid, .privacy-card, .policy { grid-template-columns: 1fr; }
   .hero { padding-top: 36px; }
   .hero-visual { min-height: 600px; max-width: 520px; width: 100%; margin-inline: auto; }
   .feature-intro { gap: 18px; }
-  .features { grid-template-columns: 1fr; }
+  .features { grid-template-columns: repeat(2, 1fr); }
   .feature { padding: 30px 0; }
-  .feature + .feature { padding-left: 0; border-left: 0; border-top: 1px solid rgba(255, 255, 255, 0.16); }
+  .feature + .feature { padding-left: 26px; }
+  .feature:nth-child(3) { padding-left: 0; border-left: 0; border-top: 1px solid rgba(255, 255, 255, 0.16); }
+  .feature:nth-child(4) { border-top: 1px solid rgba(255, 255, 255, 0.16); }
   .feature-number { margin-bottom: 20px; }
+  .tour-row-reverse .tour-copy, .tour-row-reverse .tour-visual { order: initial; }
+  .tour-visual { min-height: 560px; }
   .privacy-card { gap: 30px; }
   .policy { gap: 30px; }
   .policy-meta { position: static; }
@@ -118,7 +143,7 @@ h1 { max-width: 760px; margin-bottom: 24px; font-size: clamp(3.45rem, 7.8vw, 6.8
   .shell { width: min(calc(100% - 28px), var(--max)); }
   .site-header { padding: 15px 0; }
   .brand img { width: 38px; height: 38px; }
-  .nav a:first-child { display: none; }
+  .nav a:not(:last-child) { display: none; }
   h1 { font-size: clamp(3.1rem, 17vw, 4.8rem); }
   .hero { padding-bottom: 72px; }
   .hero-visual { min-height: 500px; }
@@ -126,11 +151,22 @@ h1 { max-width: 760px; margin-bottom: 24px; font-size: clamp(3.45rem, 7.8vw, 6.8
   .phone-main { width: 68%; }
   .phone-peek { width: 47%; }
   .feature-band, .screens { padding: 74px 0; }
+  .features { grid-template-columns: 1fr; }
+  .feature + .feature, .feature:nth-child(3), .feature:nth-child(4) { padding-left: 0; border-left: 0; border-top: 1px solid rgba(255, 255, 255, 0.16); }
   .section-heading { display: block; margin-bottom: 42px; }
   .section-heading p { margin-top: 20px; }
-  .screen-grid { grid-template-columns: 1fr; gap: 50px; }
-  .screen-card { width: min(82%, 360px); margin-inline: auto; }
-  .screen-card:nth-child(2) { transform: none; }
+  .product-tour { gap: 20px; }
+  .tour-row { gap: 34px; padding: 30px 20px; border-radius: 25px; }
+  .tour-copy h3 { font-size: clamp(2rem, 11vw, 3rem); }
+  .tour-visual { min-height: 515px; padding: 28px 20px; }
+  .tour-visual .screen-frame { width: min(82%, 280px); }
+  .tour-visual-training { min-height: 570px; }
+  .stacked-screens { width: 300px; height: 520px; }
+  .stacked-screens .screen-frame { width: 205px; }
+  .screen-frame-back { right: 3px; }
+  .screen-frame-front { left: 3px; }
+  .sync-section { padding-bottom: 72px; }
+  .sync-grid { padding: 36px 26px; }
   .privacy-callout { padding-bottom: 74px; }
   .privacy-card { padding: 36px 26px; }
   .site-footer .shell { align-items: flex-start; flex-direction: column; gap: 12px; }
